@@ -4,9 +4,13 @@ var bodyParser = require('body-parser');
 const port = 8080;
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.set('view engine', 'ejs');
 
 app.get('/tin-nong',function(req,res){
     res.send("Hello Ngoc Trinh");
+});
+app.get('/nong',function(req,res){
+    res.render("Resister");
 });
 
 app.get('/tin-hot',function(req,res){
